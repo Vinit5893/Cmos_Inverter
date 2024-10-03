@@ -1,0 +1,2 @@
+Start the automated script
+Executing: /usr/bin/iverilog -o /home/vinit/inverter/and.out /home/vinit/inverter/and.v /home/vinit/inverter/and_tb.v
