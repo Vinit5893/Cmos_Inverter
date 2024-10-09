@@ -1,48 +1,79 @@
 #! /usr/bin/vvp
 :ivl_version "11.0 (stable)";
 :ivl_delay_selection "TYPICAL";
-:vpi_time_precision - 12;
+:vpi_time_precision + 0;
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
-S_0x61284cb23bf0 .scope module, "test_and" "test_and" 2 3;
- .timescale -12 -12;
-v0x61284cb35c50_0 .var "a", 0 0;
-v0x61284cb35d20_0 .var "b", 0 0;
-v0x61284cb35df0_0 .net "y", 0 0, L_0x61284cb35ef0;  1 drivers
-S_0x61284cb23d80 .scope module, "and01" "my_and" 2 8, 3 1 0, S_0x61284cb23bf0;
+S_0x5da1b33a9bf0 .scope module, "test_and" "test_and" 2 3;
+ .timescale 0 0;
+v0x5da1b33be2b0_0 .var "a", 0 0;
+v0x5da1b33be380_0 .var "b", 0 0;
+v0x5da1b33be450_0 .net "y", 0 0, L_0x5da1b33be550;  1 drivers
+S_0x5da1b33a9d80 .scope module, "and01" "my_and" 2 8, 3 1 0, S_0x5da1b33a9bf0;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "in_a";
     .port_info 1 /INPUT 1 "in_b";
     .port_info 2 /OUTPUT 1 "out";
-L_0x61284cb35ef0 .functor AND 1, v0x61284cb35c50_0, v0x61284cb35d20_0, C4<1>, C4<1>;
-v0x61284caecba0_0 .net "in_a", 0 0, v0x61284cb35c50_0;  1 drivers
-v0x61284cb35a70_0 .net "in_b", 0 0, v0x61284cb35d20_0;  1 drivers
-v0x61284cb35b30_0 .net "out", 0 0, L_0x61284cb35ef0;  alias, 1 drivers
-    .scope S_0x61284cb23bf0;
+L_0x5da1b33be550 .functor AND 1, v0x5da1b33be2b0_0, v0x5da1b33be380_0, C4<1>, C4<1>;
+v0x5da1b3372ba0_0 .net "in_a", 0 0, v0x5da1b33be2b0_0;  1 drivers
+v0x5da1b33be0d0_0 .net "in_b", 0 0, v0x5da1b33be380_0;  1 drivers
+v0x5da1b33be190_0 .net "out", 0 0, L_0x5da1b33be550;  alias, 1 drivers
+    .scope S_0x5da1b33a9bf0;
 T_0 ;
-    %vpi_call 2 12 "$dumpfile", "and.vcd" {0 0 0};
-    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000001 {0 0 0};
-    %vpi_call 2 14 "$display", "Time  a  b  y" {0 0 0};
-    %vpi_call 2 15 "$monitor", "%4d  %b  %b  %b", $time, v0x61284cb35c50_0, v0x61284cb35d20_0, v0x61284cb35df0_0 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x61284cb35c50_0, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x61284cb35d20_0, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
     %delay 5, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x61284cb35c50_0, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x61284cb35d20_0, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
     %delay 5, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x61284cb35c50_0, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x61284cb35d20_0, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5da1b33be2b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5da1b33be380_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 19 "$finish" {0 0 0};
     %end;
     .thread T_0;
+    .scope S_0x5da1b33a9bf0;
+T_1 ;
+    %vpi_call 2 23 "$dumpfile", "and.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars" {0 0 0};
+    %vpi_call 2 25 "$display", "Time  a  b  y" {0 0 0};
+    %vpi_call 2 26 "$monitor", "%4d  %b  %b  %b", $time, v0x5da1b33be2b0_0, v0x5da1b33be380_0, v0x5da1b33be450_0 {0 0 0};
+    %end;
+    .thread T_1;
 # The file index is used to find the file name in the following table.
 :file_names 4;
     "N/A";

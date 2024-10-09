@@ -1,16 +1,21 @@
 $date
-	Sun Oct  6 05:10:58 2024
+	Wed Oct  9 07:19:45 2024
 $end
 $version
 	Icarus Verilog
 $end
 $timescale
-	1ps
+	1s
 $end
 $scope module test_and $end
 $var wire 1 ! y $end
 $var reg 1 " a $end
 $var reg 1 # b $end
+$scope module and01 $end
+$var wire 1 " in_a $end
+$var wire 1 # in_b $end
+$var wire 1 ! out $end
+$upscope $end
 $upscope $end
 $enddefinitions $end
 #0
@@ -24,3 +29,19 @@ $end
 #10
 0#
 1"
+#15
+1!
+1#
+#20
+0!
+0#
+0"
+#25
+1#
+#30
+0#
+1"
+#35
+1!
+1#
+#40
