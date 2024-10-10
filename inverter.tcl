@@ -20,3 +20,8 @@ puts "Opening the covered report"
 # Usage: covered report -d v <output_file_name>
 puts [exec covered report -d v inverter.cdd]
 puts {All process Complete to find the coverage of the test bench [covered]}
+
+# [YOSYS]
+puts "Starting the Yosys synthesis"
+puts [exec yosys -s synth.tcl]
+puts {Yosys synthesis completed [yosys]}
