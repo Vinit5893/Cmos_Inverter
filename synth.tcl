@@ -15,22 +15,25 @@ techmap
 # mapping flip-flops to NanGate_15nm_OCL_functional.lib 
 # for eg. always block
 # Usage: dfflibmap -liberty <liberty_file>
-dfflibmap -liberty NanGate_15nm_OCL_functional.lib
+# dfflibmap -liberty NanGate_15nm_OCL_functional.lib
+dfflibmap -liberty toy.lib
 
 # mapping logic to NanGate_15nm_OCL_functional.lib 
 # for eg. assign block
 # Usage: abc -liberty <liberty_file>
-abc -liberty NanGate_15nm_OCL_functional.lib
- 
+# abc -liberty NanGate_15nm_OCL_functional.lib
+abc -liberty toy.lib
+
 # remove unused cells and wires
 clean
 
 # Report the current design statistics
-stat -liberty NanGate_15nm_OCL_functional.lib
+# stat -liberty NanGate_15nm_OCL_functional.lib
+stat -liberty toy.lib
 
 # Write the current design to a Verilog file
 # Usage: write_verilog -noattr <output_file_name>
-write_verilog -noattr  inverter_synth.v 
+write_verilog -noattr  inverter_synth_toylib.v
 
 # Show the current design
 show
