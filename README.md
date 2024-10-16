@@ -61,8 +61,8 @@ __Table of Contents__
 ![Yosys Flow using Platuml](https://www.plantuml.com/plantuml/png/bPDFJzj04CNl_XHpR0yWQ5MfIgAA4WH2ed_4do9Erh0UswEiTwtPSP2_VNVjG4CQkVGscxptUxEpuvEWADerDbDMIt3JEwqfS81pwv_WBh2huC67FcHPMB5hKR01vvLEqQmgyPqhbjvwWIkkQbtsw7PrNWgIKNE6iZgr7Mr9IXz_mgt_BuHec_7LAAzP-xrv3sHZc_lKG-ekDPjTTswypjPDRxstyonBdMG0ioj-9D4UIhOqWx3gZpyUvMMH1vFNHPwhvaSVFYtpu_NdeqFBZ_F125WXksG_YypARTpirf55ShYUP-GA63BIL41I-r4FSEdQJWTzYEUaIeBKAs41nH_SV7HQAaVZNS2APaCfKPh7ABQ-WiMco9FfoslciYOJcuq_O1Z0wbjeVD5DucicGJ5r3yFnm0oKiOw0iLh4AXzHkSDcD_bMq0MBIl1JlA4GACHm-4vgEMYOI6-Z_ZNh6xR9U-cKnA659LaByTq4fPy0APcwmVPlrhdbzY0kV3kqzBm0vzCpByeoFd_amO7TE1QROj_aKywLhzZ0kmjK2k__8meVpTj2hgdnQu8xrmKgXh64uR7lMMXgnCOIkbrKwqLXiyutYif1sKnHGXIzhSzxOQLdjdhuDMxil-Rmb6mlUpxkd_EeAh3mdRQTnh1zwxVpoVqOj92qh_kwgVqJB3iHSYzNPmSj6_N2QDC7t4nD8FgtYG3PIJnqZVqD)
 
 >Outputs:
-> * Statics
->>![Statics](<images/image copy 4.png>)
-> * [inverter_synth_skywater_lib.v](inverter_synth_skywater_lib.v)
+> * Statistics
+>>![Statistics](<images/image copy 4.png>)
+> * [Netlist File](inverter_synth_skywater_lib.v)
 
 ## Thank You
