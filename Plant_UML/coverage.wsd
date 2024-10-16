@@ -1,0 +1,134 @@
+@startuml
+title Coverage Flow Using Covered Tool
+
+skinparam noteBackgroundColor LightCyan
+skinparam noteBorderColor DarkBlue
+skinparam forkBarColor DarkGreen
+skinparam ActivityBackgroundColor LightYellow
+skinparam ActivityBorderColor DarkGreen
+
+:Run Coverage Analysis;
+fork
+  :Testbench file: inverter_tb.v;
+  :Testbench module name: test_inverter;
+fork again
+  :Design file: inverter.v;
+fork again
+  :VCD file: inverter.vcd;
+end fork
+note right
+    Input files
+  end note
+
+:Generates Coverage Data file: inverter.cdd;
+note right
+    Output file
+  end note
+note left 
+    Usage:
+    covered score 
+    -t <testbench_module_name> 
+    -v <Testbench_file_name> 
+    -v <Design_file_name> 
+    -vcd <vcd_file_name> 
+    -o <output_file_name>
+  end note
+
+:Show Coverage Report from inverter.cdd file;
+note left
+    Usage:
+    covered report 
+    -d v <output_file_name>
+  end note
+
+@enduml
+
+
+@startuml
+title Synthesis Flow Using Yosys
+
+skinparam noteBackgroundColor LightCyan
+skinparam noteBorderColor DarkBlue
+skinparam forkBarColor DarkGreen
+skinparam ActivityBackgroundColor LightYellow
+skinparam ActivityBorderColor DarkGreen
+
+:Run Yosys Synthesis Tool;
+
+fork
+  :Liberty file: sky130_fd_sc_hd__tt_025C_1v80.lib;
+fork again
+  :Design file: inverter.v;
+end fork
+note right
+    Input files
+  end note
+
+:Read design file;
+note left
+    Usage:
+    read_verilog <verilog_file>
+  end note
+
+:Check and assign top module;
+note left
+    Usage:
+    hierarchy 
+    -check 
+    -top 
+    <top_module_name>
+  end note
+
+:Translate Processes to Netlists;
+note left
+    Usage:
+    proc
+  end note
+
+:Map to Internal Cell Library;
+note left
+    Usage:
+    techmap
+  end note
+
+:Map Flip-Flops to Liberty File;
+note left
+    Usage:
+    dfflibmap -liberty <liberty_file>
+  end note
+
+:Map Logic (Gates) to Liberty File;
+note left
+    Usage:
+    abc -liberty <liberty_file>
+  end note
+
+:Remove Unused Cells and Wires;
+note left
+    Usage:
+    clean
+  end note
+
+:Report Design Statistics;
+note left
+    Usage:
+    stat -liberty <liberty_file>
+  end note
+
+:Write Design to Verilog File;
+note left
+    Usage:
+    write_verilog 
+    -noattr <output_file_name>
+  end note
+note right
+    Output file
+  end note
+
+:Show Current Design in pictorial form;
+note left
+    Usage:
+    show
+  end note
+  
+@enduml

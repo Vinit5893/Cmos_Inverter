@@ -23,5 +23,6 @@ puts {All process Complete to find the coverage of the test bench [covered]}
 
 # [YOSYS]
 puts "Starting the Yosys synthesis"
+# Usage: yosys -s <script_file>
 puts [exec yosys -s synth.tcl]
 puts {Yosys synthesis completed [yosys]}
